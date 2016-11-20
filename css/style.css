@@ -1,0 +1,96 @@
+html, body { min-height: 100%; height: 100%; width: 100%; min-width: 100%;  margin: 0; font-family: "josefin-sans";}
+p {margin: 0;}
+
+/** Override materialize styles */
+.row { margin: 0;}
+
+/** Team section */
+#page-content {  min-height: 100%; height: 100%;}
+#page-top { min-height: 100%; height: 100%; width: 100%; background-image: url('../img/background-gradient.jpg'); background-repeat: repeat-x; background-size: contain; }
+#bet-on-yourself { min-height: 85%; width: 100% !important;}
+#features { min-height: 90%; width: 100% !important;}
+#team { display: table; min-height: 90% !important; height: 90% !important; width: 100% !important;}
+
+/** Other useful classes */
+.circular-icon { color: black; background-color: transparent; padding: .3em; display: inline-block; border-radius: 60px; border-width: 4px;  border-color: #888; border-style: solid; }
+
+.underlined { width: 40%; margin: 0 auto; border-bottom-style: solid; border-bottom-width: 2px; }
+.border-dark-blue { border-color: #004C82; }
+.border-white { border-color: whitesmoke; }
+.border-gold { border-color: #EACC00; }
+
+/** Information card for bet on yourself section */
+.info-card > div{
+    text-align: center; margin: 0 auto; width: 80%; height: inherit;
+}
+
+.icon-square > svg {
+    height: 12em;
+    width: 12em;
+    fill: #001F35;
+    background-image: url('/img/grid_stripe2.png');
+    background-color: #fff;
+    padding: 1.5em;
+    
+    border-radius: 25%;
+    border-width: 8px;
+    border-style: solid;
+    border-color: #f8f8f8; 
+    box-shadow: inset 0 0 7px 0 rgba(0,0,0,.08); 
+}
+
+/** Separator with arrow */
+.separator-strip-arrow {
+    content: " ";
+    padding: .6em;
+    width: 100%;
+}
+.separator-strip-arrow::after {
+    content: ' ';
+    display: block;
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    left: 50%;
+    transform: rotate(45deg) translate(0, .2em);
+    z-index: 1; 
+    background-color: WhiteSmoke !important; background-image: url('../img/grid_stripe2.png');
+}
+
+/** img circular wrapper */
+.img-wrapper {
+    border-style: solid;
+    border-width: 8px;
+    border-color: rgba(0,31,53,.15);
+    border-radius: 100%;
+    box-shadow: inset 0 0 7px 0 #001F35;
+    width: 155px;
+	height: 155px;
+    margin: 0 auto;
+}
+img[class="circular"] {
+    width: 140px;
+	height: 140px;
+	border-radius: 150px;
+    border-style: solid;
+    border-color: #888;
+    border-width: 2px;
+	-webkit-border-radius: 150px;
+	-moz-border-radius: 150px;
+}
+
+/** Margins */
+.low-padding-top-bot { padding: .3em 0em; }
+.med-padding-top-bot { padding: .6em 0em; }
+.long-padding-top-bot { padding: 1em 0em; }
+.xxlong-padding-top-bot { padding: 2em 0em; }
+
+/** Background colors and pattern */
+.bg-dark-grey{ background-color: #3C3C3C; }
+.bg-dark-blue{ background-color: #004C82; }
+.bg-dark2-blue{ background-color: #001F35;}
+.bg-strip-pattern {background-color: WhiteSmoke !important; background-image: url('../img/grid_stripe2.png');}
+
+/** Icons and images */
+.logo-lisk-sepia { content: url("../img/lisk-logo-grey_white.png"); height: 60px; width: 100px; }
+.logo-bc-sepia { content: url("../img/logo3-bn_2_no_bet _black.png"); height: 45px; width: 165px; margin-top: 25px;}

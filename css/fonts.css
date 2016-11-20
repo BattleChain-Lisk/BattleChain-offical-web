@@ -1,0 +1,18 @@
+@font-face{
+    font-family: "josefin-sans";
+    src: url('../fonts/josefin-sans/JosefinSans-Regular.ttf');
+}
+
+/** Font color */
+.font-white { color: white; }
+.font-gold { color: #EACC00; }
+.font-dark-blue{ color: #004C82; }
+.font-clear-red { color: #f44336; }
+
+/** Text align */
+.text-center { text-align: center; }
+
+/** Defined font sizes */
+.font-big { font-size: 24px}
+.font-medium { font-size: 1.25rem; }
+.font-small { font-size: 1.1rem; }
