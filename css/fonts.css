@@ -8,6 +8,12 @@
 .font-gold { color: #EACC00; }
 .font-dark-blue{ color: #004C82; }
 .font-clear-red { color: #f44336; }
+.font-clear-green { color: #7cb342; }
+.font-clear-blue-transp{ background-color: rgba(0,76,130, .7) !important; }
+
+
+/** Icons */
+.icon-big { font-size: 2.5rem !important;}
 
 /** Text align */
 .text-center { text-align: center; }
