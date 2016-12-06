@@ -1,5 +1,10 @@
-html, body { min-height: 100%; height: 100%; width: 100%; min-width: 100%;  margin: 0; font-family: "josefin-sans";}
+html, body { min-height: 100%; height: 100%; width: 100%; min-width: 100%;  margin: 0; 
+    font-family: "roboto-thin"; font-weight: 800;}
 p {margin: 0;}
+
+#big-logo {
+    width: 50rem; 
+}
 
 /** Override materialize styles */
 .row { margin: 0;}
@@ -7,8 +12,8 @@ p {margin: 0;}
 /** Team section */
 #page-content {  min-height: 100%; height: 100%;}
 #page-top { min-height: 100%; height: 100%; width: 100%; background-image: url('../img/background-gradient.jpg'); background-repeat: repeat-x; background-size: contain; }
-#bet-on-yourself { min-height: 85%; width: 100% !important;}
-#features { min-height: 40%; width: 100% !important;}
+#bet-on-yourself { min-height: 90%; height: 90%; width: 100% !important;}
+#features { min-height: 80%; height: 80%; width: 100% !important;}
 #team { display: table; min-height: 90% !important; height: 90% !important; width: 100% !important;}
 
 /** Other useful classes */
@@ -18,6 +23,16 @@ p {margin: 0;}
 .border-dark-blue { border-color: #004C82; }
 .border-white { border-color: whitesmoke; }
 .border-gold { border-color: #EACC00; }
+
+
+/** Navigator */
+.nav-option {
+    cursor: grab;
+    padding: 0em 2em;
+}
+.nav-option:hover {
+    border-bottom: solid 4px #004C82;
+}
 
 /** Information card for bet on yourself section */
 .info-card > div{
@@ -57,6 +72,24 @@ p {margin: 0;}
     background-color: WhiteSmoke !important; background-image: url('../img/grid_stripe2.png');
 }
 
+/** Separator without arrow */
+.separator-arrow-grey {
+    content: " ";
+    padding: .6em;
+    width: 100%;
+}
+.separator-arrow-grey::after {
+    content: ' ';
+    display: block;
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    left: 50%;
+    transform: rotate(45deg) translate(0, .2em);
+    z-index: 1; 
+    background-color: #C3C3C3 !important;
+}
+
 /** img circular wrapper */
 .img-wrapper {
     border-style: solid;
@@ -91,6 +124,14 @@ img[class="circular"] {
 .bg-dark-blue{ background-color: #004C82; }
 .bg-dark2-blue{ background-color: #001F35;}
 .bg-strip-pattern {background-color: WhiteSmoke !important; background-image: url('../img/grid_stripe2.png');}
+
+/** Align */
+div[class="centered-div"]{
+    margin: 0 auto;
+    width: 50%;
+}
+
+.full-width { width: 100%; }
 
 /** Icons and images */
 .logo-lisk-sepia { content: url("../img/lisk-logo-grey_white.png"); height: 60px; width: 100px; }

@@ -3,6 +3,24 @@
     src: url('../fonts/josefin-sans/JosefinSans-Regular.ttf');
 }
 
+@font-face {
+    font-family: "roboto-regular";
+    src: url('../fonts/roboto/Roboto-Regular.ttf');
+}
+
+@font-face {
+    font-family: "roboto-thin";
+    src: url('../fonts/roboto/Roboto-Thin.ttf');
+}
+
+
+@font-face {
+    font-family: "open-sans";
+    src: url('https://fonts.googleapis.com/css?family=Open+Sans');
+}
+
+
+
 /** Font color */
 .font-white { color: white; }
 .font-gold { color: #EACC00; }
@@ -23,3 +41,4 @@
 .font-big { font-size: 24px}
 .font-medium { font-size: 1.25rem; }
 .font-small { font-size: 1.1rem; }
+.font-bold { font-weight: bold; }
