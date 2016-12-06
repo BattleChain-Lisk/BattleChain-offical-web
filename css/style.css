@@ -20,6 +20,7 @@ p {margin: 0;}
 .circular-icon { color: black; background-color: transparent; padding: .3em; display: inline-block; border-radius: 60px; border-width: 4px;  border-color: #888; border-style: solid; }
 
 .underlined { width: 40%; margin: 0 auto; border-bottom-style: solid; border-bottom-width: 2px; }
+.underlined-no-width { border-bottom-style: solid; border-bottom-width: 2px; }
 .border-dark-blue { border-color: #004C82; }
 .border-white { border-color: whitesmoke; }
 .border-gold { border-color: #EACC00; }
@@ -87,7 +88,7 @@ p {margin: 0;}
     left: 50%;
     transform: rotate(45deg) translate(0, .2em);
     z-index: 1; 
-    background-color: #C3C3C3 !important;
+    background-color: #EEEEEE !important;
 }
 
 /** img circular wrapper */
@@ -124,6 +125,7 @@ img[class="circular"] {
 .bg-dark-blue{ background-color: #004C82; }
 .bg-dark2-blue{ background-color: #001F35;}
 .bg-strip-pattern {background-color: WhiteSmoke !important; background-image: url('../img/grid_stripe2.png');}
+.bg-white2 { background-color: #FDFDFD; }
 
 /** Align */
 div[class="centered-div"]{
