@@ -62,7 +62,7 @@
                             <use xlink:href="img/icons/gamepad-colored.svg#Capa_1"></use>
                         </svg>
                     </i> 
-                    <h3>PLAY</h3>
+                    <h3 id="play-link">PLAY</h3>
                     <p class="font-medium" >Play our retro videogames and try to beat yourself and other players. Retro is fast and funny, you'll cant stop playing!</p>
                 </div>
             </div>
@@ -73,7 +73,7 @@
                             <use xlink:href="img/icons/bitcoin-arrow-colored.svg#Capa_1"></use>
                         </svg>
                     </i>
-                    <h3>BET</h3>
+                    <h3 id="bet-link">BET</h3>
                     <p class="font-medium" >Bet against other players for making grow your LSK. If you are a good player, you can achieve a lot of funds!</p>
                 </div>
             </div>
@@ -84,7 +84,7 @@
                             <use xlink:href="img/icons/first-prize-colored.svg#Capa_1"></use>
                         </svg>
                     </i>
-                    <h3>WIN</h3>
+                    <h3 id="win-link">WIN</h3>
                     <p class="font-medium" >Beat your rivals and try to become the best player of the platform. You put your skills and we put the system. The sky ir your limit!</p>
                 </div>
             </div>  
@@ -194,7 +194,7 @@ theredhawk (106014395311695277L)</a>
             <div class="col s12 m4 info-card">
                 <div>
                     <div style="width: 100%">
-                        <div class="img-wrapper ">
+                        <div class="img-wrapper coin-flip">
                             <img class="circular" src="img/carnet_lou_bn.png" alt="lou_profile">
                         </div> 
                     </div>
@@ -273,7 +273,18 @@ theredhawk (106014395311695277L)</a>
 
 
     <script>
+        // Carousel behaviour
         $('.carousel.carousel-slider').carousel({full_width: true});
+        
+        $('#play-link').click(function(){
+            $('.indicator-item')[0].click()
+        });
+        $('#bet-link').click(function(){
+            $('.indicator-item')[1].click()
+        });
+        $('#win-link').click(function(){
+            $('.indicator-item')[2].click()
+        });
     </script>
 <style>
     

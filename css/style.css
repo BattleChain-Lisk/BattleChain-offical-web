@@ -138,3 +138,11 @@ div[class="centered-div"]{
 /** Icons and images */
 .logo-lisk-sepia { content: url("../img/lisk-logo-grey_white.png"); height: 60px; width: 100px; }
 .logo-bc-sepia { content: url("../img/logo3-bn_2_no_bet _black.png"); height: 45px; width: 165px; margin-top: 25px;}
+
+
+/* TODO: Coin flip animation */
+/*.coin-flip:hover {
+    opacity:.4;
+    transform: rotateY(180deg);
+    transition-duration: 2.5s; 
+}*/
