@@ -27,6 +27,9 @@ p {margin: 0;}
 
 /** Other useful classes */
 .circular-icon { color: black; background-color: transparent; padding: .3em; display: inline-block; border-radius: 60px; border-width: 4px;  border-color: #888; border-style: solid; }
+.square-icon {
+    color: whitesmoke; background-color: #004C82; padding: .4em; border-radius: 15%; font-size: 1.2em;
+}
 
 .underlined { width: 40%; margin: 0 auto; border-bottom-style: solid; border-bottom-width: 2px; }
 .underlined-no-width { border-bottom-style: solid; border-bottom-width: 2px; }
@@ -95,7 +98,7 @@ p {margin: 0;}
     left: 50%;
     transform: rotate(45deg) translate(0, .2em);
     z-index: 1; 
-    background-color: #EEEEEE !important;
+    background-color: #BDBDBD !important;
 }
 
 /** img circular wrapper */
@@ -127,6 +130,8 @@ img[class="circular"] {
 .long-padding-top-bot { padding: 1em 0em; }
 .xxlong-padding-top-bot { padding: 2em 0em; }
 .xxxlong-padding-top-bot { padding: 3em 0em; }
+
+.xxlong-margin-top-bot { margin: 2em 0em;}
 
 /** Background colors and pattern */
 .bg-dark-grey{ background-color: #3C3C3C; }

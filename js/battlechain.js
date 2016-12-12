@@ -21,7 +21,7 @@ $(document).ready(function(){
 
 })
 
-$('.carousel.carousel-slider').on('slide', function (e) {
+$('.carousel.carousel-slider').carousel().on('next', function (e) {
     console.log('slide event!');
 });
 
