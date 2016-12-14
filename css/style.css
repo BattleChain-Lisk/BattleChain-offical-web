@@ -12,6 +12,26 @@ p {
   margin: 0;
 }
 
+.square-icon {
+    color: whitesmoke;
+    background-color: #004C82;
+    padding: .4em;
+    border-radius: 15%;
+    font-size: 1.2em;
+
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.diamond {
+   display: block;
+   height: 1em;
+   width: 1em;
+   transform: rotate(45deg) translate(0, .2em);
+   background-color: #BDBDBD;
+   background-image: url('../img/grid_stripe2.png');
+}
+
 #big-logo {
     width: 50rem;
 }
@@ -24,10 +44,40 @@ p {
    margin: 0;
 }
 
+.rst-padding {
+   padding: 0;
+}
+
 #page-content {
   min-height: 100%;
   height: 100%;
 }
+
+/** Margins */
+.low-padding-top-bot { padding: .3em 0em; }
+.med-padding-top-bot { padding: .6em 0em; }
+.long-padding-top-bot { padding: 1em 0em; }
+.xxlong-padding-top-bot { padding: 2em 0em; }
+.xxxlong-padding-top-bot { padding: 3em 0em; }
+
+.xxlong-margin-top-bot { margin: 2em 0em;}
+.xxxlong-margin-top-bot { margin: 3em 0em;}
+
+/** Background colors and pattern */
+.bg-dark-grey{ background-color: #3C3C3C; }
+.bg-dark-blue{ background-color: #004C82; }
+.bg-dark2-blue{ background-color: #001F35;}
+.bg-strip-pattern {background-color: WhiteSmoke !important; background-image: url('../img/grid_stripe2.png');}
+.bg-white2 { background-color: #FDFDFD; }
+.bg-light-blue {background-color: #0078CF;}
+.bg-light2-blue {background-color: #1e88e5;}
+
+.underlined-no-width { border-bottom-style: solid; border-bottom-width: 2px; }
+.border-dark-blue { border-color: #004C82; }
+.border-white { border-color: whitesmoke; }
+.border-gold { border-color: #EACC00; }
+
+.width-80 { width: 80%; margin: 0 auto;}
 
 /** Sections */
 section {
@@ -112,41 +162,90 @@ section {
       }
 
 #details {
-   /*min-height: 90%;*/
-   /*height:90%;*/
    min-height: auto;
    height:auto;
 }
 
-   #details .carousel-slider {
-      /*min-height: 100% !important;*/
-      /*height: 100% !important;*/
-      height: 715px;
+   #details .carousel-item img {
+      max-height: 40em;
    }
 
-.carousel-item {height: 100%;}
-.carousel-item > div {height: 90%;}
 
-
-#features { min-height: 80%; height: 80%; width: 100% !important;}
-#features .row{ min-height: 100% }
-#team { display: table; min-height: 80% !important; height: 80% !important; width: 100% !important;}
-
-/** Other useful classes */
-.circular-icon { color: black; background-color: transparent; padding: .3em; display: inline-block; border-radius: 60px; border-width: 4px;  border-color: #888; border-style: solid; }
-.square-icon {
-    color: whitesmoke; background-color: #004C82; padding: .4em; border-radius: 15%; font-size: 1.2em;
+#features {
+   min-height: auto;
+   height: auto;
 }
 
-.underlined-no-width { border-bottom-style: solid; border-bottom-width: 2px; }
-.border-dark-blue { border-color: #004C82; }
-.border-white { border-color: whitesmoke; }
-.border-gold { border-color: #EACC00; }
+#team {
+   height: auto;
+   min-height: auto;
+}
 
-.horizontal-list ul li { float: left; margin-right: 1em;}
+   #team .title {
+      margin-bottom: 0;
+      border-bottom-style: solid;
+      border-bottom-width: 2px;
+}
 
-.footer-icon { color: #9e9e9e; background-color: #212121;}
+   #team .info-card {
+      padding: 1em 0;
+   }
 
+   #team .info-card .square-icon:hover {
+      color: #9e9e9e;
+      background-color: #212121;
+   }
+
+   #team .info-card .img-wrapper {
+      width: 155px;
+      height: 155px;
+      margin: 0 auto;
+      border-style: double;
+      border-width: 4px;
+      border-color: rgba(0, 76, 130, .8);
+      border-radius: 100%;
+      /*box-shadow: inset 0 0 7px 0 #001F35;*/
+   }
+
+      .img-wrapper .circular {
+         width: 100%;
+         height: 100%;
+         border-radius: 100%;
+      	-webkit-border-radius: 100%;
+      	-moz-border-radius: 100%;
+      }
+
+footer.page-footer {
+    background-color: #3C3C3C;
+}
+
+   .footer-icon {
+      color: #9e9e9e;
+      background-color: #212121;
+   }
+
+      .footer-icon:hover {
+         color: #ffffff;
+         background-color: #004C82;
+      }
+
+   .logo-lisk-sepia {
+      content: url("../img/lisk-logo-grey_white.png");
+      margin-left: 0.5em;
+   }
+
+   .logo-battle-sepia {
+      display: inline-block;
+      background-image: url("../img/battle-chain-icon-mini.png");
+      background-size: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 4rem;
+      width: 4rem;
+      margin-right: 0.5em;
+   }
+
+/** Slide to top button */
 .slide-top {
    width: 3em;
    height: 3em;
@@ -222,61 +321,17 @@ section {
     background-color: #BDBDBD !important;
 }
 
-/** img circular wrapper */
-.img-wrapper {
-    border-style: solid;
-    border-width: 8px;
-    /*border-color: rgba(0,31,53,.15);*/
-    border-color: rgba(0, 76, 130, .8);
-    border-radius: 100%;
-    box-shadow: inset 0 0 7px 0 #001F35;
-    width: 155px;
-	height: 155px;
-    margin: 0 auto;
-}
-img[class="circular"] {
-    width: 140px;
-	height: 140px;
-	border-radius: 150px;
-    border-style: solid;
-    border-color: rgba(0, 76, 130, .2);
-    border-width: 2px;
-	-webkit-border-radius: 150px;
-	-moz-border-radius: 150px;
+/** DESKTOP */
+@media only screen and (min-width: 993px) {
+      footer.page-footer .container {
+         width: 90%;
+      }
 }
 
-/** Margins */
-.low-padding-top-bot { padding: .3em 0em; }
-.med-padding-top-bot { padding: .6em 0em; }
-.long-padding-top-bot { padding: 1em 0em; }
-.xxlong-padding-top-bot { padding: 2em 0em; }
-.xxxlong-padding-top-bot { padding: 3em 0em; }
+/** TABLET */
+@media only screen and (min-width: 601px) {
 
-.xxlong-margin-top-bot { margin: 2em 0em;}
-
-/** Background colors and pattern */
-.bg-dark-grey{ background-color: #3C3C3C; }
-.bg-dark-blue{ background-color: #004C82; }
-.bg-dark2-blue{ background-color: #001F35;}
-.bg-strip-pattern {background-color: WhiteSmoke !important; background-image: url('../img/grid_stripe2.png');}
-.bg-white2 { background-color: #FDFDFD; }
-.bg-light-blue {background-color: #0078CF;}
-.bg-light2-blue {background-color: #1e88e5;}
-
-
-
-/** Align */
-div[class="centered-div"]{
-    margin: 0 auto;
-    width: 50%;
 }
-
-.full-width { width: 100%; }
-.width-80 { width: 80%; margin: 0 auto;}
-
-/** Icons and images */
-.logo-lisk-sepia { content: url("../img/lisk-logo-grey_white.png"); height: 60px; width: 100px; }
-.logo-bc-sepia { content: url("../img/logo3-bn_2_no_bet _black.png"); height: 45px; width: 165px; margin-top: 25px;}
 
 /** MOBILE */
 @media only screen and (max-width: 601px) {
@@ -288,6 +343,10 @@ div[class="centered-div"]{
 }
 
 
+/*.full-width { width: 100%; }*/
+
+/** Icons and images */
+/*.logo-bc-sepia { content: url("../img/logo3-bn_2_no_bet _black.png"); height: 45px; width: 165px; margin-top: 25px;}*/
 
 /* TODO: Coin flip animation */
 /*.coin-flip:hover {

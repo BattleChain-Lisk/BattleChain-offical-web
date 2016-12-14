@@ -13,7 +13,6 @@ $(window).on('scroll', function () {
    }
 });
 
-$('#details .carousel.carousel-slider').carousel({full_width: true});
 
 function init() {
    setupMenuLinks();
@@ -54,6 +53,8 @@ function setupDetails() {
 
          selectCard($(this));
       });
+
+      $('#details .carousel.carousel-slider').carousel({full_width: true});
 }
 
 function selectCard(selection) {
