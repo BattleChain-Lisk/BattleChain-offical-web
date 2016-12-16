@@ -1,40 +1,71 @@
-// Carousel behaviour
-$('.carousel.carousel-slider').carousel({full_width: true});
-
-$('.icon-square').click(function(){
-    $('.icon-square').removeClass('selected-icon');
-    $(this).addClass('selected-icon');
-})
-
 $(document).ready(function(){
-    
-    var listIcons = $('.icon-square');
-    var listIndicators = $('.indicator-item');
-    
-    for(var i=0, total=listIcons.length; i<total; i++){
-        var indicator = listIndicators[i];
-        $(listIcons[i]).bind('click', {'indicator':indicator}, function(event){
-            var data = event.data;
-            $(data.indicator).click();
-        });
-    }
-
+   init();
 })
 
-$('.carousel.carousel-slider').carousel().on('next', function (e) {
-    console.log('slide event!');
+$(window).on('scroll', function () {
+   var sy = window.pageYOffset || $(window).scrollTop(),
+      slideTop = $('.slide-top');
+
+   if (sy >= $('#main-title').offset().top + 50) {
+      slideTop.addClass('st-is-visible');
+   } else {
+      slideTop.removeClass('st-is-visible');
+   }
 });
 
 
-$('#play-link').click(function(){
-    $('.indicator-item')[0].click()
-});
-$('#bet-link').click(function(){
-    $('.indicator-item')[1].click()
-});
-$('#grow-link').click(function(){
-    $('.indicator-item')[2].click()
-});
-$('#clash-link').click(function(){
-    $('.indicator-item')[3].click()
-});
+function init() {
+   setupMenuLinks();
+
+   setupDetails();
+
+   setupSlideTop();
+}
+
+function setupMenuLinks() {
+   $('#main-title .nav-option a').on('click', function (ev) {
+		var target = $(this.href.substr(this.href.indexOf('#')));
+
+		ev.preventDefault();
+		if (target && target.length > 0) {
+			$('html, body').animate({
+				scrollTop: target.offset().top
+			}, 1000);
+		}
+	});
+}
+
+function setupDetails() {
+   var icons = $('.icon-square'),
+      links = $('.info-card h3');
+
+      icons.on('click', function(ev){
+         ev.preventDefault();
+
+         icons.removeClass('selected-icon');
+         $(this).addClass('selected-icon');
+
+         selectCard($(this));
+      });
+
+      links.on('click', function(ev) {
+         ev.preventDefault();
+
+         selectCard($(this));
+      });
+
+      $('#details .carousel.carousel-slider').carousel({full_width: true});
+}
+
+function selectCard(selection) {
+   var pos = selection.data('position') || selection.siblings('.icon-square').data('position');
+   $('#details .carousel').carousel('set', pos - 1);
+}
+
+function setupSlideTop() {
+   $('.slide-top').on('click', function () {
+		$('html, body').animate({
+			scrollTop: $('#main-title').offset().top
+		}, 1000);
+	});
+}

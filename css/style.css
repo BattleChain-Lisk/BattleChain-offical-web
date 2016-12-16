@@ -1,73 +1,289 @@
-html, body { min-height: 100%; height: 100%; width: 100%; min-width: 100%;  margin: 0; 
-    font-family: "roboto-thin"; font-weight: 800;}
-p {margin: 0;}
+html, body {
+  min-height: 100%;
+  height: 100%;
+  width: 100%;
+  min-width: 100%;
+  margin: 0;
+  font-family: "roboto-thin";
+  font-weight: 800;
+}
+
+p {
+  margin: 0;
+}
+
+.square-icon {
+    color: whitesmoke;
+    background-color: #004C82;
+    padding: .4em;
+    border-radius: 15%;
+    font-size: 1.2em;
+
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.diamond {
+   display: block;
+   height: 1em;
+   width: 1em;
+   transform: rotate(45deg) translate(0, .2em);
+   background-color: #BDBDBD;
+   background-image: url('../img/grid_stripe2.png');
+}
 
 #big-logo {
-    width: 50rem; 
+    width: 50rem;
 }
 
 /** Override materialize styles */
 .row { margin: 0;}
 
-/** Sections */
-#page-content {  min-height: 100%; height: 100%;}
-#page-top { min-height: 100%; height: 100%; width: 100%; background-image: url('../img/malachite_grid-wallpaper-800.jpg'); background-repeat: repeat-x; background-size: contain; }
-#main-title {height: 85%; min-height: 85%; }
-#bet-on-yourself { /*min-height: 90%; height: 90%;*/ min-height: none; width: 100% !important;}
-#features { min-height: 80%; height: 80%; width: 100% !important;}
-#features .row{ min-height: 100% }
-#team { display: table; min-height: 80% !important; height: 80% !important; width: 100% !important;}
-#details {min-height: 90%; height:90%;}
-
-/* details */
-#details .carousel-slider { min-height: 100% !important; height: 100% !important; }
-.carousel-item {height: 100%;}
-.carousel-item > div {height: 90%;}
-
-
-/** Other useful classes */
-.circular-icon { color: black; background-color: transparent; padding: .3em; display: inline-block; border-radius: 60px; border-width: 4px;  border-color: #888; border-style: solid; }
-.square-icon {
-    color: whitesmoke; background-color: #004C82; padding: .4em; border-radius: 15%; font-size: 1.2em;
+/** Helpers */
+.rst-margin {
+   margin: 0;
 }
 
-.underlined { width: 40%; margin: 0 auto; border-bottom-style: solid; border-bottom-width: 2px; }
+.rst-padding {
+   padding: 0;
+}
+
+#page-content {
+  min-height: 100%;
+  height: 100%;
+}
+
+/** Margins */
+.low-padding-top-bot { padding: .3em 0em; }
+.med-padding-top-bot { padding: .6em 0em; }
+.long-padding-top-bot { padding: 1em 0em; }
+.xxlong-padding-top-bot { padding: 2em 0em; }
+.xxxlong-padding-top-bot { padding: 3em 0em; }
+
+.xxlong-margin-top-bot { margin: 2em 0em;}
+.xxxlong-margin-top-bot { margin: 3em 0em;}
+
+/** Background colors and pattern */
+.bg-dark-grey{ background-color: #3C3C3C; }
+.bg-dark-blue{ background-color: #004C82; }
+.bg-dark2-blue{ background-color: #001F35;}
+.bg-strip-pattern {background-color: WhiteSmoke !important; background-image: url('../img/grid_stripe2.png');}
+.bg-white2 { background-color: #FDFDFD; }
+.bg-light-blue {background-color: #0078CF;}
+.bg-light2-blue {background-color: #1e88e5;}
+
 .underlined-no-width { border-bottom-style: solid; border-bottom-width: 2px; }
 .border-dark-blue { border-color: #004C82; }
 .border-white { border-color: whitesmoke; }
 .border-gold { border-color: #EACC00; }
 
-.horizontal-list ul li { float: left; margin-right: 1em;}
+.width-80 { width: 80%; margin: 0 auto;}
 
-.footer-icon { color: #9e9e9e; background-color: #212121;}
-
-
-/** Navigator */
-.nav-option { border-right: solid 1px #9e9e9e; }
-.nav-option a { cursor: grab; padding: 0em 2em; color: #9e9e9e; letter-spacing: 4px; }
-.nav-option a:hover { border-bottom: solid 4px #004C82; }
-
-/** Information card for bet on yourself section */
-.info-card > div{
-    text-align: center; margin: 0 auto; width: 80%; height: inherit;
+/** Sections */
+section {
+  height: 100%;
+  min-height: 100%;
+  width: 100%;
 }
 
-.icon-square > svg {
-    height: 12em;
-    width: 12em;
-    fill: #001F35;
-    background-image: url('/img/grid_stripe2.png');
-    background-color: #fff;
-    padding: 1.5em;
-    
-    border-radius: 25%;
-    border-width: 8px;
-    border-style: solid;
-    border-color: #f8f8f8; 
-    box-shadow: inset 0 0 7px 0 rgba(0,0,0,.08); 
+#page-top {
+  background-image: url('../img/malachite_grid-wallpaper-800.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
-.icon-square.selected-icon > svg { border-color: #EACC00; }
+   #page-top .row:first-child {
+      padding-top: 7em;
+   }
+
+      #page-top h1 {
+         border-bottom-style: solid;
+         border-bottom-width: 2px;
+      }
+
+#main-title {
+   height: 85%;
+   min-height: 85%;
+}
+
+   .nav-option {
+      border-right: solid 1px #9e9e9e;
+   }
+
+   .nav-option a {
+      cursor: grab;
+      padding: 0em 2em;
+      color: #9e9e9e;
+      letter-spacing: 4px;
+   }
+
+   .nav-option a:hover {
+      border-bottom: solid 4px #004C82;
+   }
+
+#bet-on-yourself {
+  min-height: auto;
+  height: auto;
+}
+
+   #bet-on-yourself .info-card {
+       text-align: center;
+       margin: 0 auto;
+       padding: 3em 1em;
+       height: inherit;
+   }
+
+      .icon-square {
+         cursor: pointer;
+      }
+
+         .icon-square > svg {
+             height: 12em;
+             width: 12em;
+             fill: #001F35;
+             background-image: url('/img/grid_stripe2.png');
+             background-color: #fff;
+             padding: 1.5em;
+
+             border-radius: 25%;
+             border-width: 8px;
+             border-style: solid;
+             border-color: #f8f8f8;
+             box-shadow: inset 0 0 7px 0 rgba(0,0,0,.08);
+         }
+
+            .icon-square.selected-icon > svg {
+               border-color: #EACC00;
+            }
+
+      .info-card h3 {
+         cursor: pointer;;
+      }
+
+#details {
+   min-height: auto;
+   height:auto;
+}
+
+   #details .carousel-item img {
+      max-height: 40em;
+   }
+
+
+#features {
+   min-height: auto;
+   height: auto;
+}
+
+#team {
+   height: auto;
+   min-height: auto;
+}
+
+   #team .title {
+      margin-bottom: 0;
+      border-bottom-style: solid;
+      border-bottom-width: 2px;
+}
+
+   #team .info-card {
+      padding: 1em 0;
+   }
+
+   #team .info-card .square-icon:hover {
+      color: #9e9e9e;
+      background-color: #212121;
+   }
+
+   #team .info-card .img-wrapper {
+      width: 155px;
+      height: 155px;
+      margin: 0 auto;
+      border-style: double;
+      border-width: 4px;
+      border-color: rgba(0, 76, 130, .8);
+      border-radius: 100%;
+      /*box-shadow: inset 0 0 7px 0 #001F35;*/
+   }
+
+      .img-wrapper .circular {
+         width: 100%;
+         height: 100%;
+         border-radius: 100%;
+      	-webkit-border-radius: 100%;
+      	-moz-border-radius: 100%;
+      }
+
+footer.page-footer {
+    background-color: #3C3C3C;
+}
+
+   .footer-icon {
+      color: #9e9e9e;
+      background-color: #212121;
+   }
+
+      .footer-icon:hover {
+         color: #ffffff;
+         background-color: #004C82;
+      }
+
+   .logo-lisk-sepia {
+      content: url("../img/lisk-logo-grey_white.png");
+      margin-left: 0.5em;
+   }
+
+   .logo-battle-sepia {
+      display: inline-block;
+      background-image: url("../img/battle-chain-icon-mini.png");
+      background-size: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 4rem;
+      width: 4rem;
+      margin-right: 0.5em;
+   }
+
+/** Slide to top button */
+.slide-top {
+   width: 3em;
+   height: 3em;
+   position: fixed;
+   bottom: 2em;
+   right: 2em;
+   text-align: center;
+   visibility: hidden;
+   opacity: 0;
+   background-color: rgba(0, 76, 130, 0.8);
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+   border-radius: 3px;
+   cursor: pointer;
+
+   -webkit-transition: opacity 0.5s, visibility 0.5s;
+   transition: opacity 0.5s, visibility 0.5s;
+}
+
+.slide-top i {
+   font-size: 2em;
+   padding: 0.25em;
+   color: white;
+}
+
+.slide-top.st-is-visible {
+  visibility: visible;
+  opacity: 0.8;
+}
+
+.slide-top.st-is-visible:hover {
+  opacity: 1;
+}
+
+
+
+
+
+
 
 /** Separator with arrow */
 .separator-strip-arrow {
@@ -83,7 +299,7 @@ p {margin: 0;}
     width: 15px;
     left: 50%;
     transform: rotate(45deg) translate(0, .2em);
-    z-index: 1; 
+    z-index: 1;
     background-color: WhiteSmoke !important; background-image: url('../img/grid_stripe2.png');
 }
 
@@ -101,70 +317,40 @@ p {margin: 0;}
     width: 15px;
     left: 50%;
     transform: rotate(45deg) translate(0, .2em);
-    z-index: 1; 
+    z-index: 1;
     background-color: #BDBDBD !important;
 }
 
-/** img circular wrapper */
-.img-wrapper {
-    border-style: solid;
-    border-width: 8px;
-    /*border-color: rgba(0,31,53,.15);*/
-    border-color: rgba(0, 76, 130, .8);
-    border-radius: 100%;
-    box-shadow: inset 0 0 7px 0 #001F35;
-    width: 155px;
-	height: 155px;
-    margin: 0 auto;
-}
-img[class="circular"] {
-    width: 140px;
-	height: 140px;
-	border-radius: 150px;
-    border-style: solid;
-    border-color: rgba(0, 76, 130, .2);
-    border-width: 2px;
-	-webkit-border-radius: 150px;
-	-moz-border-radius: 150px;
+/** DESKTOP */
+@media only screen and (min-width: 993px) {
+      footer.page-footer .container {
+         width: 90%;
+      }
 }
 
-/** Margins */
-.low-padding-top-bot { padding: .3em 0em; }
-.med-padding-top-bot { padding: .6em 0em; }
-.long-padding-top-bot { padding: 1em 0em; }
-.xxlong-padding-top-bot { padding: 2em 0em; }
-.xxxlong-padding-top-bot { padding: 3em 0em; }
+/** TABLET */
+@media only screen and (min-width: 601px) {
 
-.xxlong-margin-top-bot { margin: 2em 0em;}
-
-/** Background colors and pattern */
-.bg-dark-grey{ background-color: #3C3C3C; }
-.bg-dark-blue{ background-color: #004C82; }
-.bg-dark2-blue{ background-color: #001F35;}
-.bg-strip-pattern {background-color: WhiteSmoke !important; background-image: url('../img/grid_stripe2.png');}
-.bg-white2 { background-color: #FDFDFD; }
-.bg-light-blue {background-color: #0078CF;}
-.bg-light2-blue {background-color: #1e88e5;}
-
-
-
-/** Align */
-div[class="centered-div"]{
-    margin: 0 auto;
-    width: 50%;
 }
 
-.full-width { width: 100%; }
-.width-80 { width: 80%; margin: 0 auto;}
+/** MOBILE */
+@media only screen and (max-width: 601px) {
+   .icon-square > svg {
+      height: 10em;
+      width: 10em;
+      padding: 0.5em;
+   }
+}
+
+
+/*.full-width { width: 100%; }*/
 
 /** Icons and images */
-.logo-lisk-sepia { content: url("../img/lisk-logo-grey_white.png"); height: 60px; width: 100px; }
-.logo-bc-sepia { content: url("../img/logo3-bn_2_no_bet _black.png"); height: 45px; width: 165px; margin-top: 25px;}
-
+/*.logo-bc-sepia { content: url("../img/logo3-bn_2_no_bet _black.png"); height: 45px; width: 165px; margin-top: 25px;}*/
 
 /* TODO: Coin flip animation */
 /*.coin-flip:hover {
     opacity:.4;
     transform: rotateY(180deg);
-    transition-duration: 2.5s; 
+    transition-duration: 2.5s;
 }*/
