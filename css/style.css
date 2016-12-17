@@ -77,8 +77,6 @@ p {
 .border-white { border-color: whitesmoke; }
 .border-gold { border-color: #EACC00; }
 
-.width-80 { width: 80%; margin: 0 auto;}
-
 /** Sections */
 section {
   height: 100%;
@@ -103,23 +101,27 @@ section {
       }
 
 #main-title {
-   height: 85%;
-   min-height: 85%;
-}
 
-   .nav-option {
+}
+   .row .nav-option {
+      padding: 1em 0;
+   }
+
+   .nav-option:not(:last-child) {
       border-right: solid 1px #9e9e9e;
    }
 
    .nav-option a {
-      cursor: grab;
-      padding: 0em 2em;
       color: #9e9e9e;
       letter-spacing: 4px;
    }
 
    .nav-option a:hover {
       border-bottom: solid 4px #004C82;
+   }
+
+   #main-title > div:last-child {
+      height: calc(100% - 4em);
    }
 
 #bet-on-yourself {
@@ -167,13 +169,17 @@ section {
 }
 
    #details .carousel-item img {
-      max-height: 40em;
+      max-height: 25em;
    }
 
 
 #features {
    min-height: auto;
    height: auto;
+}
+
+#features .row {
+   min-height: 100%
 }
 
 #team {
@@ -217,6 +223,7 @@ section {
 
 footer.page-footer {
     background-color: #3C3C3C;
+    margin-top: 0;
 }
 
    .footer-icon {
@@ -323,18 +330,27 @@ footer.page-footer {
 
 /** DESKTOP */
 @media only screen and (min-width: 993px) {
+
       footer.page-footer .container {
          width: 90%;
       }
 }
 
 /** TABLET */
-@media only screen and (min-width: 601px) {
+@media only screen and (min-width: 601px) and (max-width: 992px) {
 
+   .nav-option:nth-child(even) {
+      border-right: none;
+   }
 }
 
 /** MOBILE */
 @media only screen and (max-width: 601px) {
+
+   .nav-option:not(:last-child) {
+      border-right: none;
+   }
+
    .icon-square > svg {
       height: 10em;
       width: 10em;
