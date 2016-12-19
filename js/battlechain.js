@@ -37,7 +37,8 @@ function setupMenuLinks() {
 
 function setupDetails() {
    var icons = $('.icon-square'),
-      links = $('.info-card h3');
+      links = $('.info-card h3'),
+      carousel = $('#details .carousel.carousel-slider');
 
       icons.on('click', function(ev){
          ev.preventDefault();
@@ -54,7 +55,7 @@ function setupDetails() {
          selectCard($(this));
       });
 
-      $('#details .carousel.carousel-slider').carousel({full_width: true});
+      carousel.carousel({full_width: true});
 }
 
 function selectCard(selection) {
