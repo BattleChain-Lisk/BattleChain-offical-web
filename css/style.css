@@ -174,11 +174,8 @@ section {
    height:auto;
 }
 
-   #details .carousel {
-      height: 35em !important;
-   }
-
    #details .carousel-item {
+      height: 38em;
       display: -webkit-flex !important;
       display: -ms-flexbox !important;
       display: flex !important;
