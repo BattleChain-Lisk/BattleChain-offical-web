@@ -256,7 +256,13 @@ footer.page-footer {
       }
 
    .logo-lisk-sepia {
-      content: url("../img/lisk-logo-grey_white.png");
+      display: inline-block;
+      background-image: url("../img/lisk-logo-grey_white.png");
+      background-size: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 2.5em;
+      width: 6rem;
       margin-left: 0.5em;
    }
 
@@ -266,7 +272,7 @@ footer.page-footer {
       background-size: 100%;
       background-position: center;
       background-repeat: no-repeat;
-      height: 4rem;
+      height: 2.5em;
       width: 4rem;
       margin-right: 0.5em;
    }
