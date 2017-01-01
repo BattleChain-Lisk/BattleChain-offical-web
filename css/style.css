@@ -353,6 +353,16 @@ footer.page-footer {
     background-color: #BDBDBD !important;
 }
 
+.separator-grey::after {
+    content: ' ';
+    display: block;
+    margin: 0 auto;
+    width: 70%;
+    border-top: solid 2px white;
+    margin-top: .5em;
+    margin-bottom: .5em;
+}
+
 /** DESKTOP */
 @media only screen and (min-width: 993px) {
 
