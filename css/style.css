@@ -85,14 +85,17 @@ section {
 }
 
 #page-top {
- /* background-image: url('../img/malachite_grid-wallpaper-800.jpg'); */
+    background-color:  #004C82;
+    background-image: url(../img/triangles-background.svg);
+    background-opacity: 0.5;
   background-repeat: no-repeat;
-  background-size: cover;
+    background-size: cover;
   background-position: center;
 }
 
    #page-top .row:first-child {
       padding-top: 7em;
+       z-index: 1000;
    }
 
       #page-top h1 {
