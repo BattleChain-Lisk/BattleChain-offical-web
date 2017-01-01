@@ -85,7 +85,7 @@ section {
 }
 
 #page-top {
-  background-image: url('../img/malachite_grid-wallpaper-800.jpg');
+ /* background-image: url('../img/malachite_grid-wallpaper-800.jpg'); */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
