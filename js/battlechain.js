@@ -75,3 +75,6 @@ function setupSlideTop() {
 		}, 1000);
 	});
 }
+
+
+$('.modal').modal();
