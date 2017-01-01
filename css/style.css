@@ -79,20 +79,23 @@ p {
 
 /** Sections */
 section {
-  height: 100%;
+  /*height: 100%;*/
   min-height: 100%;
   width: 100%;
 }
 
 #page-top {
-  background-image: url('../img/malachite_grid-wallpaper-800.jpg');
+    background-color:  #004C82;
+    background-image: url(../img/triangles-background.svg);
+    background-opacity: 0.5;
   background-repeat: no-repeat;
-  background-size: cover;
+    background-size: cover;
   background-position: center;
 }
 
    #page-top .row:first-child {
       padding-top: 7em;
+       z-index: 1000;
    }
 
       #page-top h1 {
@@ -101,8 +104,14 @@ section {
       }
 
 #main-title {
-
+    height: auto;
+    min-height: auto;
 }
+
+#main-title > div {
+   margin-bottom: 12em;
+}
+
    .row .nav-option {
       padding: 1em 0;
    }
@@ -168,11 +177,8 @@ section {
    height:auto;
 }
 
-   #details .carousel {
-      height: 35em !important;
-   }
-
    #details .carousel-item {
+      height: 38em;
       display: -webkit-flex !important;
       display: -ms-flexbox !important;
       display: flex !important;
@@ -253,7 +259,13 @@ footer.page-footer {
       }
 
    .logo-lisk-sepia {
-      content: url("../img/lisk-logo-grey_white.png");
+      display: inline-block;
+      background-image: url("../img/lisk-logo-grey_white.png");
+      background-size: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 2.5em;
+      width: 6rem;
       margin-left: 0.5em;
    }
 
@@ -263,7 +275,7 @@ footer.page-footer {
       background-size: 100%;
       background-position: center;
       background-repeat: no-repeat;
-      height: 4rem;
+      height: 2.5em;
       width: 4rem;
       margin-right: 0.5em;
    }
@@ -342,6 +354,16 @@ footer.page-footer {
     transform: rotate(45deg) translate(0, .2em);
     z-index: 1;
     background-color: #BDBDBD !important;
+}
+
+.separator-grey::after {
+    content: ' ';
+    display: block;
+    margin: 0 auto;
+    width: 70%;
+    border-top: solid 2px white;
+    margin-top: .5em;
+    margin-bottom: .5em;
 }
 
 /** DESKTOP */

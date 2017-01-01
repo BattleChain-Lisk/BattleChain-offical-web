@@ -17,7 +17,7 @@ $(window).on('scroll', function () {
 function init() {
    setupMenuLinks();
 
-   setupDetails();
+   setupDetailsCarousel();
 
    setupSlideTop();
 }
@@ -35,32 +35,37 @@ function setupMenuLinks() {
 	});
 }
 
-function setupDetails() {
+function setupDetailsCarousel() {
    var icons = $('.icon-square'),
       links = $('.info-card h3'),
-      carousel = $('#details .carousel.carousel-slider');
+      carousel = $('.detail-carousel');
 
       icons.on('click', function(ev){
          ev.preventDefault();
-
-         icons.removeClass('selected-icon');
-         $(this).addClass('selected-icon');
-
-         selectCard($(this));
+         selectCard($(this), carousel);
       });
 
       links.on('click', function(ev) {
          ev.preventDefault();
-
-         selectCard($(this));
+         selectCard($(this).siblings('.icon-square'), carousel);
       });
 
-      carousel.carousel({full_width: true});
+      carousel.slick({
+         dots: true,
+         speed: 500,
+         arrows: false,
+         cssEase: 'ease'
+      });
+
+      carousel.on('afterChange', function(event, slick, currentSlide){
+         icons.removeClass('selected-icon');
+         $(icons[currentSlide]).addClass('selected-icon');
+      });
 }
 
-function selectCard(selection) {
-   var pos = selection.data('position') || selection.siblings('.icon-square').data('position');
-   $('#details .carousel').carousel('set', pos - 1);
+function selectCard(selection, carousel) {
+   var pos = selection.data('position');
+   carousel.slick('slickGoTo', pos - 1);
 }
 
 function setupSlideTop() {
