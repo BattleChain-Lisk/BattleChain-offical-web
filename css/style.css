@@ -87,21 +87,20 @@ section {
 #page-top {
     background-color:  #004C82;
     background-image: url(../img/triangles-background.svg);
-    background-opacity: 0.5;
-  background-repeat: no-repeat;
+    opacity: 0.5;
+    background-repeat: no-repeat;
     background-size: cover;
-  background-position: center;
+    background-position: center;
 }
 
    #page-top .row:first-child {
       padding-top: 7em;
-       z-index: 1000;
+      z-index: 1000;
    }
 
-      #page-top h1 {
-         border-bottom-style: solid;
-         border-bottom-width: 2px;
-      }
+   #page-top .row:first-child img {
+      width: 100%;
+   }
 
 #main-title {
     height: auto;
@@ -178,7 +177,6 @@ section {
 }
 
    #details .carousel-item {
-      height: 38em;
       display: -webkit-flex !important;
       display: -ms-flexbox !important;
       display: flex !important;
@@ -189,6 +187,7 @@ section {
 
    #details .carousel-item img {
       max-height: 25em;
+      margin: 10em 0;
    }
 
 
@@ -380,6 +379,10 @@ footer.page-footer {
    .nav-option:nth-child(even) {
       border-right: none;
    }
+
+   #details .carousel-item img {
+      margin: 18em 0;
+   }
 }
 
 /** MOBILE */
@@ -393,6 +396,10 @@ footer.page-footer {
       height: 10em;
       width: 10em;
       padding: 0.5em;
+   }
+
+   #details .carousel-item {
+      height: 50em;
    }
 }
 
