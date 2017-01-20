@@ -26,7 +26,6 @@ function setupMenuLinks() {
    $('#main-title .nav-option a').on('click', function (ev) {
 		var target = $(this.href.substr(this.href.indexOf('#')));
 
-		ev.preventDefault();
 		if (target && target.length > 0) {
 			$('html, body').animate({
 				scrollTop: target.offset().top
@@ -76,5 +75,3 @@ function setupSlideTop() {
 	});
 }
 
-
-$('.modal').modal();
